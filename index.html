@@ -1,233 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flower Bliss X — Discreet Luxury Companionship</title>
-
-  <meta name="description" content="Flower Bliss X offers refined, discreet companionship rooted in presence, warmth, and professionalism." />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --ivory: #fbf7f2;
-      --champagne: #efe6d8;
-      --gold: #c9b27c;
-      --ink: #2b2b2b;
-      --muted: #6f6f6f;
-
-      --serif: 'Cormorant Garamond', serif;
-      --sans: 'Inter', sans-serif;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, var(--ivory), var(--champagne));
-      color: var(--ink);
-      font-family: var(--sans);
-      line-height: 1.7;
-    }
-
-    section {
-      padding: 5rem 1.5rem;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 980px;
-      margin: auto;
-    }
-
-    h1, h2 {
-      font-family: var(--serif);
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 { font-size: 2.6rem; }
-    h2 { font-size: 2rem; }
-
-    p {
-      max-width: 720px;
-      margin: 0 auto 1.4rem;
-      color: var(--muted);
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.85rem 2.4rem;
-      border: 1px solid var(--gold);
-      border-radius: 40px;
-      text-decoration: none;
-      color: var(--ink);
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    .cta:hover {
-      background: var(--gold);
-      color: #fff;
-    }
-
-    .divider {
-      width: 60px;
-      height: 1px;
-      background: var(--gold);
-      margin: 3rem auto;
-    }
-
-    .muse-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .muse {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      color: var(--ink);
-    }
-
-    .services {
-      max-width: 700px;
-      margin: auto;
-      text-align: left;
-    }
-
-    .service {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      padding-bottom: 1rem;
-    }
-
-    .service span {
-      font-family: var(--serif);
-    }
-
-    .service a {
-      text-decoration: none;
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--ink);
-      border: 1px solid var(--gold);
-      padding: 0.5rem 1.2rem;
-      border-radius: 30px;
-    }
-
-    .service a:hover {
-      background: var(--gold);
-      color: #fff;
-    }
-
-    .contact-links a {
-      display: inline-block;
-      margin: 0.5rem 1rem;
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      font-size: 0.75rem;
-      color: var(--muted);
-      padding-bottom: 3rem;
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flower Bliss X</title>
+<meta name="description" content="A private world of refined companionship rooted in presence, warmth, and discretion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #0f0f12;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 24px;
+}
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-family: Playfair Display, serif;
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+.hero p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+.section {
+  margin: 60px 0;
+}
+.section h2 {
+  font-family: Playfair Display, serif;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #17171c;
+  padding: 20px;
+  border-radius: 12px;
+}
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  border-radius: 20px;
+  background: #c9a45c;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.social a {
+  margin: 0 8px;
+  color: #c9a45c;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
+<div class="container">
 
-<!-- HERO -->
-<section>
-  <div class="container">
-    <h1>A private world of refined companionship</h1>
-    <p>Where presence, warmth, and discretion unfold with intention and grace.</p>
-    <a href="#contact" class="cta">Request a Private Introduction</a>
-  </div>
+<section class="hero">
+<h1>A private world of refined companionship</h1>
+<p>Presence, warmth, and discretion unfold with intention and grace.</p>
+<a class="button" href="https://square.link/u/SXomQ1gC">Request a Private Introduction</a>
 </section>
 
-<div class="divider"></div>
-
-<!-- ABOUT -->
-<section>
-  <div class="container">
-    <h2>About Me</h2>
-    <p>Flower Bliss X is curated for those who value genuine connection, emotional intelligence, and discretion.</p>
-    <p>Each experience is intentional, calm, and professionally held.</p>
-  </div>
+<section class="section">
+<h2>About Me</h2>
+<p>
+Flower Bliss X is curated for those who value genuine connection, discretion, and emotional intelligence.
+Every interaction is intentional, calm, and professionally held.
+</p>
 </section>
 
-<div class="divider"></div>
-
-<!-- MUSE -->
-<section>
-  <div class="container">
-    <h2>Select Your Muse</h2>
-    <div class="muse-grid">
-      <div class="muse">Soft Elegance</div>
-      <div class="muse">Velvet Night</div>
-      <div class="muse">Golden Hour</div>
-    </div>
-  </div>
+<section class="section">
+<h2>Select Your Muse</h2>
+<div class="cards">
+<div class="card">Soft Elegance</div>
+<div class="card">Velvet Night</div>
+<div class="card">Golden Hour</div>
+</div>
 </section>
 
-<div class="divider"></div>
-
-<!-- SERVICES -->
-<section>
-  <div class="container">
-    <h2>Services & Pricing</h2>
-    <div class="services">
-      <div class="service">
-        <span>Overnight Experience — $500</span>
-        <a href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
-      </div>
-      <div class="service">
-        <span>Dinner / Evening Engagement — $350</span>
-        <a href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
-      </div>
-      <div class="service">
-        <span>Travel Companion Experience — $800</span>
-        <a href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
-      </div>
-    </div>
-  </div>
+<section class="section">
+<h2>Services & Pricing</h2>
+<div class="cards">
+<div class="card">Overnight — $500<br><a class="button" href="https://square.link/u/SXomQ1gC">Book Now</a></div>
+<div class="card">Dinner / Evening — $350<br><a class="button" href="https://square.link/u/SXomQ1gC">Book Now</a></div>
+<div class="card">Travel Companion — $800<br><a class="button" href="https://square.link/u/SXomQ1gC">Book Now</a></div>
+</div>
 </section>
 
-<div class="divider"></div>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <h2>Private Contact</h2>
-    <p>For respectful inquiries and introductions, please connect below.</p>
-
-    <div class="contact-links">
-      <a href="https://wa.me/15053780859" target="_blank">WhatsApp</a>
-      <a href="https://twitter.com/Flneverest" target="_blank">Twitter</a>
-    </div>
-  </div>
+<section class="section">
+<h2>Private Contact</h2>
+<p>
+WhatsApp: <a href="https://wa.me/15053780859" class="button">Begin Conversation</a>
+</p>
+<div class="social">
+<a href="https://twitter.com/Flneverest">Twitter</a>
+</div>
 </section>
 
-<footer>
-  <p>Flower Bliss X offers private, non-explicit companionship rooted in presence and respect.</p>
-  <p><a href="privacy.html">Privacy & Legal</a> · © Flower Bliss X</p>
+</div>
+
+<footer class="footer">
+Flower Bliss X offers private, non-explicit companionship rooted in presence and respect.<br>
+© Flower Bliss X
 </footer>
 
 </body>
