@@ -1,110 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flower Bliss X — Discreet Luxury Companionship</title>
-<meta name="description" content="Flower Bliss X offers refined, discreet companionship with professionalism and warmth.">
-<meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower Bliss X — Discreet Luxury Companionship</title>
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta name="description" content="Flower Bliss X offers refined, discreet companionship rooted in presence, warmth, and professionalism." />
+  <meta name="robots" content="index, follow" />
 
-<link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <style>
+    :root {
+      --ivory: #fbf7f2;
+      --champagne: #efe6d8;
+      --gold: #c9b27c;
+      --ink: #2b2b2b;
+      --muted: #6f6f6f;
+
+      --serif: 'Cormorant Garamond', serif;
+      --sans: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--ivory), var(--champagne));
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+    }
+
+    section {
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 2rem; }
+
+    p {
+      max-width: 720px;
+      margin: 0 auto 1.4rem;
+      color: var(--muted);
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.85rem 2.4rem;
+      border: 1px solid var(--gold);
+      border-radius: 40px;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .cta:hover {
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 3rem auto;
+    }
+
+    .muse-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .muse {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--ink);
+    }
+
+    .services {
+      max-width: 700px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .service {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding-bottom: 1rem;
+    }
+
+    .service span {
+      font-family: var(--serif);
+    }
+
+    .service a {
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border: 1px solid var(--gold);
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+    }
+
+    .service a:hover {
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: var(--muted);
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- HERO -->
-<section class="hero">
+<section>
   <div class="container">
-    <img src="images/logo.png" alt="Flower Bliss X Logo" class="logo">
-    <p>A private world of refined companionship — presence, warmth, and discretion unfold with intention and grace.</p>
+    <h1>A private world of refined companionship</h1>
+    <p>Where presence, warmth, and discretion unfold with intention and grace.</p>
     <a href="#contact" class="cta">Request a Private Introduction</a>
   </div>
 </section>
 
+<div class="divider"></div>
+
 <!-- ABOUT -->
-<section id="about">
+<section>
   <div class="container">
     <h2>About Me</h2>
-    <p>Flower Bliss X is curated for those who value genuine connection, discretion, and emotional intelligence.</p>
-    <p>Every interaction is intentional, calm, and professionally held.</p>
+    <p>Flower Bliss X is curated for those who value genuine connection, emotional intelligence, and discretion.</p>
+    <p>Each experience is intentional, calm, and professionally held.</p>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
+<div class="divider"></div>
+
+<!-- MUSE -->
+<section>
   <div class="container">
     <h2>Select Your Muse</h2>
-    <div class="gallery">
-      <div class="img-card" onclick="selectImage(this, 'Soft Elegance')">
-        <img src="images/gallery1.jpeg" alt="Soft Elegance">
-        <span>Soft Elegance</span>
+    <div class="muse-grid">
+      <div class="muse">Soft Elegance</div>
+      <div class="muse">Velvet Night</div>
+      <div class="muse">Golden Hour</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section>
+  <div class="container">
+    <h2>Services & Pricing</h2>
+    <div class="services">
+      <div class="service">
+        <span>Overnight Experience — $500</span>
+        <a href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
       </div>
-      <div class="img-card" onclick="selectImage(this, 'Velvet Night')">
-        <img src="images/gallery2.jpeg" alt="Velvet Night">
-        <span>Velvet Night</span>
+      <div class="service">
+        <span>Dinner / Evening Engagement — $350</span>
+        <a href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
       </div>
-      <div class="img-card" onclick="selectImage(this, 'Golden Hour')">
-        <img src="images/gallery3.jpeg" alt="Golden Hour">
-        <span>Golden Hour</span>
+      <div class="service">
+        <span>Travel Companion Experience — $800</span>
+        <a href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <h2>Services & Pricing</h2>
-    <ul>
-      <li>Overnight: $500 — <a href="https://checkout.square.site/merchant/MLVQK0N34N5V6/checkout/ZK7W5CX2UWSCSA7L56DFMOBU" target="_blank">Book Now</a></li>
-      <li>Dinner / Evening: $350 — <a href="https://checkout.square.site/merchant/MLVQK0N34N5V6/checkout/ZK7W5CX2UWSCSA7L56DFMOBU" target="_blank">Book Now</a></li>
-      <li>Travel Companion: $800 — <a href="https://checkout.square.site/merchant/MLVQK0N34N5V6/checkout/ZK7W5CX2UWSCSA7L56DFMOBU" target="_blank">Book Now</a></li>
-    </ul>
-  </div>
-</section>
+<div class="divider"></div>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <h2>Private Contact</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" placeholder="A brief introduction"></textarea>
-      <button type="submit">Begin Conversation</button>
-    </form>
+    <p>For respectful inquiries and introductions, please connect below.</p>
 
-    <!-- Social -->
-    <div class="social-buttons">
-      <a href="https://wa.me/5053780859" target="_blank">WhatsApp</a>
+    <div class="contact-links">
+      <a href="https://wa.me/15053780859" target="_blank">WhatsApp</a>
       <a href="https://twitter.com/Flneverest" target="_blank">Twitter</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="container">
-    <p>Flower Bliss X offers private, non-explicit companionship rooted in presence and respect.</p>
-    <p><a href="privacy.html">Privacy & Legal</a> · ©️ Flower Bliss X</p>
-  </div>
+  <p>Flower Bliss X offers private, non-explicit companionship rooted in presence and respect.</p>
+  <p><a href="privacy.html">Privacy & Legal</a> · © Flower Bliss X</p>
 </footer>
-
-<script>
-// Image Selection
-let selectedMuse = '';
-function selectImage(element, label) {
-  document.querySelectorAll('.img-card').forEach(card => card.classList.remove('selected'));
-  element.classList.add('selected');
-  const messageBox = document.querySelector('textarea[name="message"]');
-  if (messageBox) messageBox.value = `Selected Muse: ${label}\n\nI would like to begin a private introduction.`;
-}
-</script>
 
 </body>
 </html>
