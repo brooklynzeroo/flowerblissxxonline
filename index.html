@@ -564,6 +564,13 @@ body {
 </style>
 
 </head>
+  <!-- PWA Manifest -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#c9a45c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Flower Bliss X">
+<link rel="apple-touch-icon" href="/images/icon-192.png">
 
 <body>
 
@@ -837,4 +844,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 </script>
 
 </body>
+  <!-- PWA Service Worker -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed'));
+    });
+  }
+</script>
 </html>
