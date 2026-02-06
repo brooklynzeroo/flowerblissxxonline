@@ -20,16 +20,23 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#c9a45c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Flower Bliss X">
+<link rel="apple-touch-icon" href="/images/icon-192.png">
 
 <style>
 :root {
-  --bg-dark: #0f0f12;
-  --bg-card: #17171c;
-  --text-light: #f2f2f2;
-  --text-muted: rgba(242, 242, 242, 0.7);
+  --bg-dark: #0b0b0f;
+  --bg-card: #15151a;
+  --text-light: #f5f2ec;
+  --text-muted: rgba(245, 242, 236, 0.72);
   --gold: #c9a45c;
   --gold-hover: #e0bb73;
+  --rose: #d4a1b4;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -40,17 +47,55 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-dark);
+  font-family: 'Manrope', 'Inter', sans-serif;
+  background: radial-gradient(circle at top, rgba(201, 164, 92, 0.12), transparent 55%), var(--bg-dark);
   color: var(--text-light);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 24px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--gold-hover);
+}
+
+.nav-cta {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 164, 92, 0.4);
+  color: var(--gold);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-cta:hover {
+  background: rgba(201, 164, 92, 0.15);
+  color: var(--gold-hover);
 }
 
 /* Floating Social Buttons */
@@ -93,36 +138,46 @@ body {
 
 /* Logo */
 .logo-container {
-  text-align: center;
-  margin-bottom: 40px;
-  animation: fadeIn 0.8s ease forwards;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 60px;
   height: auto;
   opacity: 0.95;
   transition: var(--transition);
 }
 
-.logo:hover {
-  opacity: 1;
-  transform: scale(1.02);
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+.logo-text span {
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
 
 /* Hero */
 .hero {
-  text-align: center;
-  padding: 80px 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0 40px;
   animation: fadeUp 0.8s ease forwards;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   margin-bottom: 20px;
-  line-height: 1.3;
-  background: linear-gradient(135deg, var(--gold), var(--gold-hover));
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--gold), var(--rose));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -131,10 +186,42 @@ body {
 .hero p { 
   font-size: 1.1rem; 
   opacity: 0.85; 
-  margin-bottom: 32px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 28px;
+}
+
+.hero-card {
+  background: linear-gradient(160deg, rgba(201, 164, 92, 0.2), rgba(21, 21, 26, 0.9));
+  border: 1px solid rgba(201, 164, 92, 0.25);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.hero-card p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.hero-badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  font-size: 0.85rem;
+  color: var(--gold-hover);
+  background: rgba(201, 164, 92, 0.1);
 }
 
 /* Sections */
@@ -165,8 +252,23 @@ body {
 
 /* About Section */
 .about-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.about-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.about-panel {
+  background: rgba(21, 21, 26, 0.9);
+  border: 1px solid rgba(201, 164, 92, 0.15);
+  padding: 24px;
+  border-radius: 16px;
 }
 
 .about-content p {
@@ -216,7 +318,7 @@ body {
 /* Cards */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   margin-top: 32px;
 }
@@ -224,7 +326,7 @@ body {
 .card {
   background: var(--bg-card);
   padding: 32px 24px;
-  border-radius: 16px;
+  border-radius: 18px;
   text-align: center;
   transition: var(--transition);
   border: 1px solid rgba(201, 164, 92, 0.1);
@@ -276,12 +378,12 @@ body {
 
 /* Muse Selection */
 .muse-card {
-  background: linear-gradient(135deg, var(--bg-card), #1a1a20);
+  background: linear-gradient(135deg, rgba(201, 164, 92, 0.15), #1a1a20);
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--gold);
-  padding: 40px 24px;
+  padding: 32px 24px;
 }
 
 .muse-card:hover {
@@ -298,9 +400,9 @@ body {
 
 .gallery img {
   width: 100%;
-  height: 280px;
+  height: 260px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 16px;
   transition: var(--transition);
   opacity: 0.85;
   cursor: pointer;
@@ -317,7 +419,7 @@ body {
 /* Testimonials */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   margin-top: 32px;
 }
@@ -325,7 +427,7 @@ body {
 .testimonial-card {
   background: var(--bg-card);
   padding: 32px;
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid rgba(201, 164, 92, 0.1);
   position: relative;
   transition: var(--transition);
@@ -363,7 +465,7 @@ body {
 
 /* FAQ */
 .faq-container {
-  max-width: 800px;
+  max-width: 860px;
   margin: 32px auto 0;
 }
 
@@ -429,11 +531,18 @@ body {
   background: linear-gradient(135deg, var(--gold), var(--gold-hover));
   color: #000;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: var(--transition);
   box-shadow: 0 4px 15px rgba(201, 164, 92, 0.3);
   font-size: 0.95rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
+}
+
+.button.secondary {
+  background: transparent;
+  border: 1px solid rgba(201, 164, 92, 0.4);
+  color: var(--gold-hover);
+  box-shadow: none;
 }
 
 .button:hover {
@@ -453,6 +562,16 @@ body {
   gap: 16px;
   flex-wrap: wrap;
   margin-top: 24px;
+}
+
+.contact-card {
+  background: rgba(21, 21, 26, 0.85);
+  border: 1px solid rgba(201, 164, 92, 0.2);
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 .social-links {
@@ -523,7 +642,9 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero { padding: 60px 20px 40px; }
+  .hero { padding: 40px 0 24px; }
+  .nav { flex-direction: column; align-items: flex-start; }
+  .nav-links { flex-wrap: wrap; }
   .section { margin: 60px 0; }
   .floating-social {
     right: 16px;
@@ -564,13 +685,6 @@ body {
 </style>
 
 </head>
-  <!-- PWA Manifest -->
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#c9a45c">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Flower Bliss X">
-<link rel="apple-touch-icon" href="/images/icon-192.png">
 
 <body>
 
@@ -586,51 +700,70 @@ body {
 </div>
 
 <div class="container">
-
-<!-- Logo -->
-
-<div class="logo-container">
-  <img src="/images/logo.png" alt="Flower Bliss X Logo" class="logo">
-</div>
+  <nav class="nav">
+    <div class="logo-container">
+      <img src="/images/logo.png" alt="Flower Bliss X Logo" class="logo">
+      <div class="logo-text">
+        Flower Bliss X
+        <span>Discreet Luxury Companionship</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="https://square.link/u/SXomQ1gC" target="_blank">Request Intro</a>
+  </nav>
 
 <!-- HERO -->
 
 <section class="hero">
-  <h1>A private world of refined companionship</h1>
-  <p>Presence, warmth, and discretion unfold with intention and grace.</p>
-  <a class="button" href="https://square.link/u/SXomQ1gC" target="_blank">Request a Private Introduction</a>
+  <div>
+    <h1>A private world of refined companionship</h1>
+    <p>Presence, warmth, and discretion unfold with intention and grace. Discover curated experiences grounded in emotional intelligence, quiet confidence, and timeless elegance.</p>
+    <div>
+      <a class="button" href="https://square.link/u/SXomQ1gC" target="_blank">Request a Private Introduction</a>
+      <a class="button secondary" href="#experiences">Explore Experiences</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <h3>Private Concierge</h3>
+    <p>Every engagement is tailored to your preferences — from elegant dinners to travel companionship, each moment is intentionally designed.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">Discretion</span>
+      <span class="hero-badge">Sophistication</span>
+      <span class="hero-badge">Presence</span>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 
-<section class="section">
+<section class="section" id="about">
   <h2>About Flower Bliss X</h2>
   <p class="section-subtitle">Where sophistication meets genuine connection</p>
   <div class="about-content">
     <p>Flower Bliss X is curated for those who value genuine connection, discretion, and emotional intelligence. Every interaction is intentional, calm, and professionally held.</p>
-
-```
-<p>I bring refined presence to every encounter—whether an intimate dinner, a cultural outing, or a quiet escape from the everyday. Each experience is thoughtfully designed to feel effortless, authentic, and completely private.</p>
-
-<div class="about-highlights">
-  <div class="highlight-box">
-    <div class="highlight-icon">🔒</div>
-    <h3>Absolute Discretion</h3>
-    <p>Your privacy is sacred and protected</p>
-  </div>
-  <div class="highlight-box">
-    <div class="highlight-icon">✨</div>
-    <h3>Emotional Intelligence</h3>
-    <p>Genuine connection and presence</p>
-  </div>
-  <div class="highlight-box">
-    <div class="highlight-icon">💎</div>
-    <h3>Refined Elegance</h3>
-    <p>Cultivated taste and sophistication</p>
-  </div>
-</div>
-```
-
+    <p>I bring refined presence to every encounter—whether an intimate dinner, a cultural outing, or a quiet escape from the everyday. Each experience is thoughtfully designed to feel effortless, authentic, and completely private.</p>
+    <div class="about-grid">
+      <div class="about-panel">
+        <div class="highlight-icon">🔒</div>
+        <h3>Absolute Discretion</h3>
+        <p>Your privacy is sacred and protected.</p>
+      </div>
+      <div class="about-panel">
+        <div class="highlight-icon">✨</div>
+        <h3>Emotional Intelligence</h3>
+        <p>Genuine connection and calming presence.</p>
+      </div>
+      <div class="about-panel">
+        <div class="highlight-icon">💎</div>
+        <h3>Refined Elegance</h3>
+        <p>Cultivated taste and sophisticated care.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -648,7 +781,7 @@ body {
 
 <!-- GALLERY -->
 
-<section class="section">
+<section class="section" id="gallery">
   <h2>Gallery</h2>
   <p class="section-subtitle">A glimpse into refined moments</p>
   <div class="gallery">
@@ -661,7 +794,7 @@ body {
 
 <!-- SERVICES & PRICING -->
 
-<section class="section">
+<section class="section" id="experiences">
   <h2>Experiences & Investment</h2>
   <p class="section-subtitle">Curated moments designed for your pleasure</p>
   <div class="cards">
@@ -672,25 +805,20 @@ body {
       <a class="button" href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
       <p style="opacity:0.65;font-size:0.85rem;margin-top:12px;">Confirm via <a href="https://wa.me/15053780859" style="color:var(--gold);">WhatsApp</a> after booking</p>
     </div>
-
-```
-<div class="card">
-  <h3>Overnight Experience</h3>
-  <div class="price">$500</div>
-  <p>Immersive time together—unhurried moments from evening until morning, naturally unfolding.</p>
-  <a class="button" href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
-  <p style="opacity:0.65;font-size:0.85rem;margin-top:12px;">Confirm via <a href="https://wa.me/15053780859" style="color:var(--gold);">WhatsApp</a> after booking</p>
-</div>
-
-<div class="card">
-  <h3>Travel Companion</h3>
-  <div class="price">$800</div>
-  <p>Extended journeys together—from weekend getaways to destination experiences, crafted with care.</p>
-  <a class="button" href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
-  <p style="opacity:0.65;font-size:0.85rem;margin-top:12px;">Confirm via <a href="https://wa.me/15053780859" style="color:var(--gold);">WhatsApp</a> after booking</p>
-</div>
-```
-
+    <div class="card">
+      <h3>Overnight Experience</h3>
+      <div class="price">$500</div>
+      <p>Immersive time together—unhurried moments from evening until morning, naturally unfolding.</p>
+      <a class="button" href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
+      <p style="opacity:0.65;font-size:0.85rem;margin-top:12px;">Confirm via <a href="https://wa.me/15053780859" style="color:var(--gold);">WhatsApp</a> after booking</p>
+    </div>
+    <div class="card">
+      <h3>Travel Companion</h3>
+      <div class="price">$800</div>
+      <p>Extended journeys together—from weekend getaways to destination experiences, crafted with care.</p>
+      <a class="button" href="https://square.link/u/SXomQ1gC" target="_blank">Book Now</a>
+      <p style="opacity:0.65;font-size:0.85rem;margin-top:12px;">Confirm via <a href="https://wa.me/15053780859" style="color:var(--gold);">WhatsApp</a> after booking</p>
+    </div>
   </div>
 </section>
 
@@ -733,52 +861,47 @@ body {
         Click any "Book Now" button to reserve through Square, then confirm your booking via WhatsApp. I'll respond within 24 hours to discuss preferences and finalize details. A deposit secures all appointments.
       </div>
     </div>
-
-```
-<div class="faq-item">
-  <div class="faq-question">
-    How is my privacy protected?
-    <span class="faq-toggle">+</span>
-  </div>
-  <div class="faq-answer">
-    Your privacy is paramount. All communications are encrypted, personal information is never shared, and complete discretion is maintained before, during, and after our time together. I operate with the highest standards of confidentiality.
-  </div>
-</div>
-
-<div class="faq-item">
-  <div class="faq-question">
-    What locations do you serve?
-    <span class="faq-toggle">+</span>
-  </div>
-  <div class="faq-answer">
-    I am available for appointments throughout major metropolitan areas and welcome opportunities for travel experiences. Specific arrangements can be discussed privately via WhatsApp.
-  </div>
-</div>
-
-<div class="faq-item">
-  <div class="faq-question">
-    What should I expect from our time together?
-    <span class="faq-toggle">+</span>
-  </div>
-  <div class="faq-answer">
-    Expect genuine connection, engaging conversation, and a relaxed atmosphere where you can truly unwind. Each experience is tailored to your preferences—whether that's an elegant dinner, cultural outing, or private time together. Authenticity and respect guide every moment.
-  </div>
-</div>
-```
-
+    <div class="faq-item">
+      <div class="faq-question">
+        How is my privacy protected?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Your privacy is paramount. All communications are encrypted, personal information is never shared, and complete discretion is maintained before, during, and after our time together. I operate with the highest standards of confidentiality.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        What locations do you serve?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        I am available for appointments throughout major metropolitan areas and welcome opportunities for travel experiences. Specific arrangements can be discussed privately via WhatsApp.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        What should I expect from our time together?
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Expect genuine connection, engaging conversation, and a relaxed atmosphere where you can truly unwind. Each experience is tailored to your preferences—whether that's an elegant dinner, cultural outing, or private time together. Authenticity and respect guide every moment.
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 
-<section class="section">
+<section class="section" id="contact">
   <h2>Private Contact</h2>
   <p class="section-subtitle">Begin a conversation</p>
-  <div class="contact-methods">
-    <a class="button" href="https://wa.me/15053780859" target="_blank">💬 WhatsApp</a>
-  </div>
-  <div class="social-links">
-    <a href="https://twitter.com/Flneverest" target="_blank">🐦 Twitter</a>
+  <div class="contact-card">
+    <p>Start with a private introduction. I respond within 24 hours to confirm availability and preferences.</p>
+    <div class="contact-methods">
+      <a class="button" href="https://wa.me/15053780859" target="_blank">💬 WhatsApp</a>
+      <a class="button secondary" href="https://twitter.com/Flneverest" target="_blank">🐦 Twitter</a>
+    </div>
   </div>
 </section>
 
@@ -789,7 +912,7 @@ body {
 <footer class="footer">
   <p>Flower Bliss X offers private, non-explicit companionship rooted in presence and respect.</p>
   <p style="margin-top:16px;">
-    <a href="/privacy-policy.html">Privacy & Legal</a> · © 2026 Flower Bliss X
+    <a href="/privacy.html">Privacy & Legal</a> · © 2026 Flower Bliss X
   </p>
   <p style="margin-top:12px;font-size:0.85rem;opacity:0.6;">Elegance. Discretion. Unforgettable Moments.</p>
 </footer>
