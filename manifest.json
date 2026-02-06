@@ -1,0 +1,24 @@
+{
+  "name": "Flower Bliss X",
+  "short_name": "Flower Bliss X",
+  "description": "A private world of refined companionship rooted in presence, warmth, and discretion.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f12",
+  "theme_color": "#c9a45c",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
